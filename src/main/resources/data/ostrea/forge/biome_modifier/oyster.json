@@ -1,0 +1,11 @@
+{
+  "type": "forge:add_features",
+  "biomes": [
+    "minecraft:warm_ocean",
+    "minecraft:lukewarm_ocean"
+  ],
+  "features": [
+    "ostrea:oyster"
+  ],
+  "step": "vegetal_decoration"
+}

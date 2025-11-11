@@ -1,0 +1,39 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": {
+        "type": "minecraft:uniform",
+        "min": 1,
+        "max": 2
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "ostrea:round_mom"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ostrea:tip_mom"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ostrea:calcium_carbonate_mom"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ostrea:iron_mom"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ostrea:copper_mom"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ostrea:gold_mom"
+        }
+      ]
+    }
+  ],
+  "random_sequence": "ostrea:chests/buried_treasure/mom"
+}

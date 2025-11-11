@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "facing=north,waterlogged=false": { "model": "ostrea:block/mechanical_oyster" },
+    "facing=east,waterlogged=false": { "model": "ostrea:block/mechanical_oyster", "y": 90 },
+    "facing=south,waterlogged=false": { "model": "ostrea:block/mechanical_oyster", "y": 180 },
+    "facing=west,waterlogged=false": { "model": "ostrea:block/mechanical_oyster", "y": 270 },
+
+    "facing=north,waterlogged=true": { "model": "ostrea:block/mechanical_oyster_on" },
+    "facing=east,waterlogged=true": { "model": "ostrea:block/mechanical_oyster_on", "y": 90 },
+    "facing=south,waterlogged=true": { "model": "ostrea:block/mechanical_oyster_on", "y": 180 },
+    "facing=west,waterlogged=true": { "model": "ostrea:block/mechanical_oyster_on", "y": 270 }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "type": "ostrea:pearlization",
+  "ingredients": [
+    {
+      "tag": "forge:copper_nuggets"
+    }
+  ],
+  "result": {
+    "item": "ostrea:copper_pearl"
+  }
+}

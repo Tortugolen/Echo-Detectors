@@ -1,0 +1,11 @@
+{
+  "type": "ostrea:pearlization",
+  "ingredients": [
+    {
+      "item": "minecraft:gold_nugget"
+    }
+  ],
+  "result": {
+    "item": "ostrea:gold_pearl"
+  }
+}

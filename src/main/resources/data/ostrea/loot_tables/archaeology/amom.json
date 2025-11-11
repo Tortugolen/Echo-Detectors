@@ -1,0 +1,39 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": {
+        "type": "minecraft:uniform",
+        "min": 1,
+        "max": 2
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "ostrea:round_amom"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ostrea:tip_amom"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ostrea:calcium_carbonate_amom"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ostrea:iron_amom"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ostrea:copper_amom"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ostrea:gold_amom"
+        }
+      ]
+    }
+  ],
+  "random_sequence": "ostrea:archaeology/amom"
+}

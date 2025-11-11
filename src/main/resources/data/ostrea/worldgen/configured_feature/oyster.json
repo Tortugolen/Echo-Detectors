@@ -1,0 +1,12 @@
+{
+  "type": "ostrea:oyster",
+  "config": {
+    "tries": 1,
+    "xz_spread": 0,
+    "y_spread": 0,
+    "feature": {
+      "feature": "ostrea:oyster",
+      "placement": []
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " # ",
+    "#X#",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stone_bricks"
+    },
+    "X": {
+      "item": "ostrea:round_amom"
+    }
+  },
+  "result": {
+    "item": "ostrea:round_inscribed_stone"
+  }
+}

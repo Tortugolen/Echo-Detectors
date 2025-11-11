@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "ostrea:block/oyster" },
+    "facing=east": { "model": "ostrea:block/oyster", "y": 90 },
+    "facing=south": { "model": "ostrea:block/oyster", "y": 180 },
+    "facing=west": { "model": "ostrea:block/oyster", "y": 270 }
+  }
+}

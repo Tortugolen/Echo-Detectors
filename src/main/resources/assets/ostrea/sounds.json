@@ -1,0 +1,10 @@
+{
+  "pearl_tip_break": {"sounds": ["ostrea:pearl_tip_break"]},
+  "oyster_hit": {
+    "sounds": [
+      "oyster_hit_1",
+      "oyster_hit_2",
+      "oyster_hit_3"
+    ]
+  }
+}

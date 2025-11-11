@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "facing=north,inky=false": { "model": "ostrea:block/iron_inscribed_stone" },
+    "facing=east,inky=false": { "model": "ostrea:block/iron_inscribed_stone", "y": 90 },
+    "facing=south,inky=false": { "model": "ostrea:block/iron_inscribed_stone", "y": 180 },
+    "facing=west,inky=false": { "model": "ostrea:block/iron_inscribed_stone", "y": 270 },
+
+    "facing=north,inky=true": { "model": "ostrea:block/iron_inscribed_stone_inky" },
+    "facing=east,inky=true": { "model": "ostrea:block/iron_inscribed_stone_inky", "y": 90 },
+    "facing=south,inky=true": { "model": "ostrea:block/iron_inscribed_stone_inky", "y": 180 },
+    "facing=west,inky=true": { "model": "ostrea:block/iron_inscribed_stone_inky", "y": 270 }
+  }
+}

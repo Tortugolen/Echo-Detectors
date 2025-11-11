@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "pattern": [
+    " & ",
+    "#X#",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:iron_ingot"
+    },
+    "X": {
+      "item": "ostrea:oyster"
+    },
+    "&": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "result": {
+    "item": "ostrea:mechanical_oyster"
+  }
+}

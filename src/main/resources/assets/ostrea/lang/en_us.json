@@ -1,0 +1,45 @@
+{
+  "tab.ostrea.ostrea": "Ostrea",
+
+  "item.ostrea.pearl": "Pearl",
+  "item.ostrea.iron_pearl": "Iron Pearl",
+  "item.ostrea.gold_pearl": "Gold Pearl",
+  "item.ostrea.copper_pearl": "Copper Pearl",
+  "item.ostrea.amorphous_pearl": "Amorphous Pearl",
+  "item.ostrea.nacre": "Nacre",
+  "item.ostrea.calcium_carbonate": "Calcium Carbonate",
+  "item.ostrea.pearl_tip": "Pearl Tip",
+  "item.ostrea.shellfish_knife": "Shellfish Knife",
+  "item.ostrea.copper_nugget": "Copper Nugget",
+  "item.ostrea.parchment": "Parchment",
+
+  "item.ostrea.round_mom": "Mechanical Oyster Modifier",
+  "item.ostrea.round_amom": "Ancient Mechanical Oyster Modifier",
+  "item.ostrea.tip_mom": "Mechanical Oyster Modifier",
+  "item.ostrea.tip_amom": "Ancient Mechanical Oyster Modifier",
+  "item.ostrea.calcium_carbonate_mom": "Mechanical Oyster Modifier",
+  "item.ostrea.calcium_carbonate_amom": "Ancient Mechanical Oyster Modifier",
+  "item.ostrea.iron_mom": "Mechanical Oyster Modifier",
+  "item.ostrea.iron_amom": "Ancient Mechanical Oyster Modifier",
+  "item.ostrea.copper_mom": "Mechanical Oyster Modifier",
+  "item.ostrea.copper_amom": "Ancient Mechanical Oyster Modifier",
+  "item.ostrea.gold_mom": "Mechanical Oyster Modifier",
+  "item.ostrea.gold_amom": "Ancient Mechanical Oyster Modifier",
+
+  "block.ostrea.oyster": "Oyster",
+
+  "block.ostrea.mechanical_oyster": "Mechanical Oyster",
+  "block.ostrea.round_inscribed_stone": "Inscribed Stone",
+  "block.ostrea.tip_inscribed_stone": "Inscribed Stone",
+  "block.ostrea.calcium_carbonate_inscribed_stone": "Inscribed Stone",
+  "block.ostrea.iron_inscribed_stone": "Inscribed Stone",
+  "block.ostrea.copper_inscribed_stone": "Inscribed Stone",
+  "block.ostrea.gold_inscribed_stone": "Inscribed Stone",
+
+  "mom.tooltip.ostrea.round": "§eRound Form§r",
+  "mom.tooltip.ostrea.tip": "§eTip Form§r",
+  "mom.tooltip.ostrea.calcium_carbonate": "§eCaC0₃ Material§r",
+  "mom.tooltip.ostrea.iron": "§eIron Material§r",
+  "mom.tooltip.ostrea.copper": "§eCopper Material§r",
+  "mom.tooltip.ostrea.gold": "§eGold Material§r"
+}

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "ostrea:nacre"
+    },
+    {
+      "item": "ostrea:nacre"
+    }
+  ],
+  "result": {
+    "item": "ostrea:pearl_tip"
+  }
+}
