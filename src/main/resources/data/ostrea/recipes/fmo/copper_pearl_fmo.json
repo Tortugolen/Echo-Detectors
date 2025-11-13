@@ -2,13 +2,13 @@
   "type": "ostrea:extended_pearlization",
   "ingredients": [
     {
-      "item": "minecraft:nacre"
+      "tag": "forge:nuggets/copper"
+    },
+    {
+      "tag": "ostrea:mom/round_mom"
     },
     {
       "tag": "ostrea:mom/copper_mom"
-    },
-    {
-      "tag": "ostrea:mom/calcium_carbonate_mom"
     }
   ],
   "result": {

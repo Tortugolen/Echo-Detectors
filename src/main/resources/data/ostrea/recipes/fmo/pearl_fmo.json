@@ -2,7 +2,7 @@
   "type": "ostrea:extended_pearlization",
   "ingredients": [
     {
-      "item": "minecraft:nacre"
+      "item": "ostrea:nacre"
     },
     {
       "tag": "ostrea:mom/round_mom"

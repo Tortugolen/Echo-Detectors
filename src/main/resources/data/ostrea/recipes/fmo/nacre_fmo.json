@@ -2,7 +2,7 @@
   "type": "ostrea:extended_pearlization",
   "ingredients": [
     {
-      "item": "minecraft:sand"
+      "tag": "minecraft:sand"
     },
     {
       "tag": "ostrea:mom/round_mom"

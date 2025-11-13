@@ -2,7 +2,7 @@
   "type": "ostrea:pearlization",
   "ingredients": [
     {
-      "item": "minecraft:sand"
+      "tag": "minecraft:sand"
     }
   ],
   "result": {

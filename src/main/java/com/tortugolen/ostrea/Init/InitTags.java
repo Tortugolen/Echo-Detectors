@@ -8,10 +8,7 @@ import net.minecraft.world.item.Item;
 
 public class InitTags {
     public static class Items {
-        //public
         public static final TagKey<Item> COPPER_NUGGETS = tag("nuggets/copper");
-        public static final TagKey<Item> COPPER_NUGGETS_ = tag("copper_nuggets");
-        public static final TagKey<Item> COPPER_NUGGETS__ = tag("copper_nugget");
 
         //MOM's
 
