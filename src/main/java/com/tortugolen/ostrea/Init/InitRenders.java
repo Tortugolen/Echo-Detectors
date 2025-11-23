@@ -3,6 +3,9 @@ package com.tortugolen.ostrea.Init;
 import com.tortugolen.ostrea.GUIs.Screens.CrusherScreen;
 import com.tortugolen.ostrea.GUIs.Screens.MechanicalOysterScreen;
 import com.tortugolen.ostrea.GUIs.Screens.OysterScreen;
+import com.tortugolen.ostrea.Models.PearlTips.CopperPearlTipProjectileModel;
+import com.tortugolen.ostrea.Models.PearlTips.GoldPearlTipProjectileModel;
+import com.tortugolen.ostrea.Models.PearlTips.IronPearlTipProjectileModel;
 import com.tortugolen.ostrea.Models.PearlTips.PearlTipProjectileModel;
 import com.tortugolen.ostrea.Renderers.PearlTips.CopperPearlTipProjectileRenderer;
 import com.tortugolen.ostrea.Renderers.PearlTips.GoldPearlTipProjectileRenderer;
@@ -35,5 +38,8 @@ public class InitRenders {
     @SubscribeEvent
     public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {
         event.registerLayerDefinition(PearlTipProjectileModel.LAYER_LOCATION, PearlTipProjectileModel::createBodyLayer);
+        event.registerLayerDefinition(IronPearlTipProjectileModel.LAYER_LOCATION, IronPearlTipProjectileModel::createBodyLayer);
+        event.registerLayerDefinition(CopperPearlTipProjectileModel.LAYER_LOCATION, CopperPearlTipProjectileModel::createBodyLayer);
+        event.registerLayerDefinition(GoldPearlTipProjectileModel.LAYER_LOCATION, GoldPearlTipProjectileModel::createBodyLayer);
     }
 }
