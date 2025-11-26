@@ -17,7 +17,7 @@
   "item.ostrea.parchment": "Parchment",
   "item.ostrea.aragonite_powder": "Aragonite Powder",
   "item.ostrea.impurities": "Impurities",
-  "item.ostrea.slingshot": "Slingshot",
+  "item.ostrea.pearl_necklace": "Pearl Necklace",
 
   "item.ostrea.round_mom": "Mechanical Oyster Modifier",
   "item.ostrea.round_amom": "Ancient Mechanical Oyster Modifier",
@@ -43,6 +43,11 @@
   "block.ostrea.copper_inscribed_stone": "Inscribed Stone",
   "block.ostrea.gold_inscribed_stone": "Inscribed Stone",
   "block.ostrea.aragonite_shard": "Aragonite Shard",
+
+  "enchantment.ostrea.shell_opener": "Shell Opener",
+  "enchantment.ostrea.selective_blessing": "Selective Blessing",
+  "enchantment.ostrea.reduction": "Reduction",
+  "enchantment.ostrea.passive_annulment": "Passive Annulment",
 
   "recipe.ostrea.crush": "Crushing",
   "recipe.ostrea.pearlization": "Pearling",

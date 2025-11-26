@@ -1,5 +1,6 @@
 package com.tortugolen.ostrea.Init;
 
+import com.tortugolen.ostrea.Items.PearlNecklaceItem;
 import com.tortugolen.ostrea.Items.PearlTips.CopperPearlTipItem;
 import com.tortugolen.ostrea.Items.PearlTips.GoldPearlTipItem;
 import com.tortugolen.ostrea.Items.PearlTips.IronPearlTipItem;
@@ -32,6 +33,7 @@ public class InitItems {
     public static final RegistryObject<Item> PARCHMENT = ITEMS.register("parchment", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> IMPURITIES = ITEMS.register("impurities", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> ARAGONITE_POWDER = ITEMS.register("aragonite_powder", () -> new PurityTooltipItem(new Item.Properties(), "§e50§r"));
+    public static final RegistryObject<Item> PEARL_NECKLACE = ITEMS.register("pearl_necklace", () -> new PearlNecklaceItem(new Item.Properties().durability(64)));
 
     //MechanicalOysterModifiers
 
@@ -61,5 +63,5 @@ public class InitItems {
     public static final RegistryObject<Item> GOLD_INSCRIBED_STONE_ITEM = ITEMS.register("gold_inscribed_stone", () -> new BlockItem(InitBlocks.GOLD_INSCRIBED_STONE.get(), new Item.Properties()));
     public static final RegistryObject<Item> CRUSHER_ITEM = ITEMS.register("crusher", () -> new BlockItem(InitBlocks.CRUSHER.get(), new Item.Properties()));
     public static final RegistryObject<Item> ARAGONITE_CLUSTER_ITEM = ITEMS.register("aragonite_cluster", () -> new BlockItem(InitBlocks.ARAGONITE_CLUSTER.get(), new Item.Properties()));
-    public static final RegistryObject<Item> ARAGONITE_SHARD = ITEMS.register("aragonite_shard", () -> new BlockItem(InitBlocks.ARAGONITE_SHARD.get(), new Item.Properties()));
+    public static final RegistryObject<Item> ARAGONITE_SHARD_ITEM = ITEMS.register("aragonite_shard", () -> new BlockItem(InitBlocks.ARAGONITE_SHARD.get(), new Item.Properties()));
 }

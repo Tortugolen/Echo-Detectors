@@ -16,6 +16,7 @@ import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
+import org.jetbrains.annotations.Nullable;
 
 public class CrushJEI implements IRecipeCategory<CrushRecipes> {
     public static final ResourceLocation UID = new ResourceLocation(Ostrea.MOD_ID, "crush");
@@ -39,9 +40,10 @@ public class CrushJEI implements IRecipeCategory<CrushRecipes> {
         return Component.translatable("recipe.ostrea.crush");
     }
 
+    @Nullable
     @Override
     public IDrawable getBackground() {
-        return this.background;
+        return background;
     }
 
     @Override

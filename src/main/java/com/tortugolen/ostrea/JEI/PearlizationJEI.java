@@ -17,6 +17,7 @@ import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
+import org.jetbrains.annotations.Nullable;
 
 public class PearlizationJEI implements IRecipeCategory<PearlizationRecipes> {
     public static final ResourceLocation UID = new ResourceLocation(Ostrea.MOD_ID, "pearlization");
@@ -40,11 +41,11 @@ public class PearlizationJEI implements IRecipeCategory<PearlizationRecipes> {
         return Component.translatable("recipe.ostrea.pearlization");
     }
 
+    @Nullable
     @Override
     public IDrawable getBackground() {
-        return this.background;
+        return background;
     }
-
     @Override
     public IDrawable getIcon() {
         return this.icon;

@@ -16,6 +16,7 @@ import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
@@ -50,9 +51,10 @@ public class ExtendedPearlizationJEI implements IRecipeCategory<ExtendedPearliza
         return Component.translatable("recipe.ostrea.pearlization");
     }
 
+    @Nullable
     @Override
     public IDrawable getBackground() {
-        return this.background;
+        return background;
     }
 
     @Override
@@ -66,8 +68,8 @@ public class ExtendedPearlizationJEI implements IRecipeCategory<ExtendedPearliza
         builder.addSlot(RecipeIngredientRole.INPUT, 55, 1).addIngredients(recipe.getIngredients().get(1));
         builder.addSlot(RecipeIngredientRole.INPUT, 73, 1).addIngredients(recipe.getIngredients().get(2));
         builder.addSlot(RecipeIngredientRole.OUTPUT, 118, 30).addItemStack(recipe.getResultItem(null));
-        builder.addSlot(RecipeIngredientRole.RENDER_ONLY, 64, 42).addItemStacks(FUELS);
-        builder.addSlot(RecipeIngredientRole.RENDER_ONLY, 118, 56).addItemStacks(IMPURITIES);
+        builder.addSlot(RecipeIngredientRole.INPUT, 64, 42).addItemStacks(FUELS);
+        builder.addSlot(RecipeIngredientRole.INPUT, 118, 56).addItemStacks(IMPURITIES);
     }
 
     @Override

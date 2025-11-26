@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    " X ",
+    "X X",
+    " I "
+  ],
+  "key": {
+    "I": {
+      "item": "ostrea:pearl"
+    },
+    "X": {
+      "item": "minecraft:gold_ingot"
+    }
+  },
+  "result": {
+    "item": "ostrea:pearl_necklace"
+  }
+}

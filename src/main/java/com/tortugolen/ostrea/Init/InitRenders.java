@@ -7,6 +7,7 @@ import com.tortugolen.ostrea.Models.PearlTips.CopperPearlTipProjectileModel;
 import com.tortugolen.ostrea.Models.PearlTips.GoldPearlTipProjectileModel;
 import com.tortugolen.ostrea.Models.PearlTips.IronPearlTipProjectileModel;
 import com.tortugolen.ostrea.Models.PearlTips.PearlTipProjectileModel;
+import com.tortugolen.ostrea.Renderers.BlockRenderers;
 import com.tortugolen.ostrea.Renderers.PearlTips.CopperPearlTipProjectileRenderer;
 import com.tortugolen.ostrea.Renderers.PearlTips.GoldPearlTipProjectileRenderer;
 import com.tortugolen.ostrea.Renderers.PearlTips.IronPearlTipProjectileRenderer;
@@ -30,6 +31,7 @@ public class InitRenders {
 
     @SubscribeEvent
     public static void onClientSetup(FMLClientSetupEvent event) {
+        event.enqueueWork(BlockRenderers::registerBlockRenderLayers);
         MenuScreens.register(InitMenus.OYSTER_MENU.get(), OysterScreen::new);
         MenuScreens.register(InitMenus.MECHANICAL_OYSTER_MENU.get(), MechanicalOysterScreen::new);
         MenuScreens.register(InitMenus.CRUSHER_MENU.get(), CrusherScreen::new);
