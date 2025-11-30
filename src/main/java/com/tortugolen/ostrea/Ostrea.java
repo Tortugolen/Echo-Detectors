@@ -22,6 +22,6 @@ public class Ostrea {
         InitRecipes.SERIALIZERS.register(modEventBus);
         InitEnchantments.ENCHANTMENTS.register(modEventBus);
         InitFeatures.FEATURES.register(modEventBus);
-
+        InitTriggers.register();
     }
 }

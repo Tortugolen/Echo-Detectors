@@ -64,4 +64,9 @@ public class InitItems {
     public static final RegistryObject<Item> CRUSHER_ITEM = ITEMS.register("crusher", () -> new BlockItem(InitBlocks.CRUSHER.get(), new Item.Properties()));
     public static final RegistryObject<Item> ARAGONITE_CLUSTER_ITEM = ITEMS.register("aragonite_cluster", () -> new BlockItem(InitBlocks.ARAGONITE_CLUSTER.get(), new Item.Properties()));
     public static final RegistryObject<Item> ARAGONITE_SHARD_ITEM = ITEMS.register("aragonite_shard", () -> new BlockItem(InitBlocks.ARAGONITE_SHARD.get(), new Item.Properties()));
+    public static final RegistryObject<Item> NACRE_BLOCK_ITEM = ITEMS.register("nacre_block", () -> new BlockItem(InitBlocks.NACRE_BLOCK.get(), new Item.Properties()));
+    public static final RegistryObject<Item> NACRE_SLAB_ITEM = ITEMS.register("nacre_slab", () -> new BlockItem(InitBlocks.NACRE_SLAB.get(), new Item.Properties()));
+    public static final RegistryObject<Item> NACRE_STAIRS_ITEM = ITEMS.register("nacre_stairs", () -> new BlockItem(InitBlocks.NACRE_STAIRS.get(), new Item.Properties()));
+    public static final RegistryObject<Item> NACRE_BRICKS_ITEM = ITEMS.register("nacre_bricks", () -> new BlockItem(InitBlocks.NACRE_BRICKS.get(), new Item.Properties()));
+    public static final RegistryObject<Item> SMOOTH_NACRE_BLOCK_ITEM = ITEMS.register("smooth_nacre_block", () -> new BlockItem(InitBlocks.SMOOTH_NACRE_BLOCK.get(), new Item.Properties()));
 }

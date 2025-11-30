@@ -18,11 +18,11 @@ public class EnchantedBooksJEI {
         addBook(books, InitEnchantments.REDUCTION.get(), 1);
         addBook(books, InitEnchantments.REDUCTION.get(), 2);
         addBook(books, InitEnchantments.REDUCTION.get(), 3);
-        addBook(books, InitEnchantments.PASSIVE_ANNULMENT.get(), 1);
-        addBook(books, InitEnchantments.PASSIVE_ANNULMENT.get(), 2);
-        addBook(books, InitEnchantments.PASSIVE_ANNULMENT.get(), 3);
-        addBook(books, InitEnchantments.PASSIVE_ANNULMENT.get(), 4);
-        addBook(books, InitEnchantments.PASSIVE_ANNULMENT.get(), 5);
+        //addBook(books, InitEnchantments.PASSIVE_ANNULMENT.get(), 1);
+        //addBook(books, InitEnchantments.PASSIVE_ANNULMENT.get(), 2);
+        //addBook(books, InitEnchantments.PASSIVE_ANNULMENT.get(), 3);
+        //addBook(books, InitEnchantments.PASSIVE_ANNULMENT.get(), 4);
+        //addBook(books, InitEnchantments.PASSIVE_ANNULMENT.get(), 5);
 
         return books;
     }

@@ -1,0 +1,38 @@
+{
+  "criteria": {
+    "oyster": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ostrea:oyster"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "ostrea:textures/gui/advancements/backgrounds/nacre_block.png",
+    "description": {
+      "translate": "advancements.ostrea.root.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "ostrea:oyster"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.ostrea.root.title"
+    }
+  },
+  "requirements": [
+    [
+      "oyster"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

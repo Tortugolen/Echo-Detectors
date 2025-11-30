@@ -1,5 +1,6 @@
 {
   "pearl_tip_break": {"sounds": ["ostrea:pearl_tip_break"]},
+  "effect_clear": {"sounds": ["ostrea:effect_clear"]},
   "oyster_hit": {
     "sounds": [
       "oyster_hit_1",

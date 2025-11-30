@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "ostrea:block/nacre_block",
+    "side": "ostrea:block/nacre_block",
+    "top": "ostrea:block/nacre_block"
+  }
+}

@@ -66,6 +66,12 @@ public class InitTabs {
                         pOutput.accept(InitItems.COPPER_INSCRIBED_STONE_ITEM.get());
                         pOutput.accept(InitItems.GOLD_INSCRIBED_STONE_ITEM.get());
 
+                        pOutput.accept(InitItems.NACRE_BLOCK_ITEM.get());
+                        pOutput.accept(InitItems.NACRE_SLAB_ITEM.get());
+                        pOutput.accept(InitItems.NACRE_STAIRS_ITEM.get());
+                        pOutput.accept(InitItems.NACRE_BRICKS_ITEM.get());
+                        pOutput.accept(InitItems.SMOOTH_NACRE_BLOCK_ITEM.get());
+
                         pOutput.accept(EnchantedBookItem.createForEnchantment(new EnchantmentInstance(InitEnchantments.SHELL_OPENER.get(), 1)));
                         pOutput.accept(EnchantedBookItem.createForEnchantment(new EnchantmentInstance(InitEnchantments.SELECTIVE_BLESSING.get(), 1)));
                         pOutput.accept(EnchantedBookItem.createForEnchantment(new EnchantmentInstance(InitEnchantments.REDUCTION.get(), 1)));

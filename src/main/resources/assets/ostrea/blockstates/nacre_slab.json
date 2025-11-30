@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "ostrea:block/nacre_slab"
+    },
+    "type=double": {
+      "model": "ostrea:block/nacre_block"
+    },
+    "type=top": {
+      "model": "ostrea:block/nacre_slab_top"
+    }
+  }
+}

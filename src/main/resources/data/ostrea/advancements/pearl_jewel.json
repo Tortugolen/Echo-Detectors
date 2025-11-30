@@ -1,0 +1,39 @@
+{
+  "parent": "ostrea:pearl",
+  "criteria": {
+    "pearl_necklace": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ostrea:pearl_necklace"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "ostrea:textures/gui/advancements/backgrounds/nacre_block.png",
+    "description": {
+      "translate": "advancements.ostrea.pearl_jewel.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "ostrea:pearl_necklace"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.ostrea.pearl_jewel.title"
+    }
+  },
+  "requirements": [
+    [
+      "pearl_necklace"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

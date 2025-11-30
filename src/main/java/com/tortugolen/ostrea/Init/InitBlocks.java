@@ -2,10 +2,7 @@ package com.tortugolen.ostrea.Init;
 
 import com.tortugolen.ostrea.Blocks.*;
 import com.tortugolen.ostrea.Ostrea;
-import net.minecraft.world.level.block.AmethystClusterBlock;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
@@ -29,6 +26,16 @@ public class InitBlocks {
                     .noOcclusion()));
     public static final RegistryObject<Block> CRUSHER = BLOCKS.register("crusher",
             () -> new CrusherBlock(BlockBehaviour.Properties.copy(Blocks.STONECUTTER)));
+    public static final RegistryObject<Block> NACRE_BLOCK = BLOCKS.register("nacre_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.QUARTZ_BLOCK)));
+    public static final RegistryObject<Block> NACRE_SLAB = BLOCKS.register("nacre_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.QUARTZ_SLAB)));
+    public static final RegistryObject<Block> NACRE_STAIRS = BLOCKS.register("nacre_stairs",
+            () -> new StairBlock(() -> NACRE_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.QUARTZ_STAIRS)));
+    public static final RegistryObject<Block> NACRE_BRICKS = BLOCKS.register("nacre_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(InitBlocks.NACRE_BLOCK.get())));
+    public static final RegistryObject<Block> SMOOTH_NACRE_BLOCK = BLOCKS.register("smooth_nacre_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.SMOOTH_QUARTZ)));
     public static final RegistryObject<Block> ARAGONITE_CLUSTER = BLOCKS.register("aragonite_cluster",
             () -> new AragoniteClusterBlock(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.COLOR_ORANGE)
@@ -68,5 +75,4 @@ public class InitBlocks {
             () -> new InscribedBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS).requiresCorrectToolForDrops(), "copper"));
     public static final RegistryObject<Block> GOLD_INSCRIBED_STONE = BLOCKS.register("gold_inscribed_stone",
             () -> new InscribedBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS).requiresCorrectToolForDrops(), "gold"));
-
 }

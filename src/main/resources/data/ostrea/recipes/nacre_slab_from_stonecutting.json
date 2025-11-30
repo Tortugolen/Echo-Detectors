@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "ostrea:nacre_block"
+  },
+  "result": "ostrea:nacre_slab"
+}

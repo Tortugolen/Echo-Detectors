@@ -16,5 +16,6 @@ public class InitSounds {
 
     public static final RegistryObject<SoundEvent> PEARL_TTP_BREAK = registerSoundEvents("pearl_tip_break");
     public static final RegistryObject<SoundEvent> OYSTER_HIT = registerSoundEvents("oyster_hit");
+    public static final RegistryObject<SoundEvent> EFFECT_CLEAR = registerSoundEvents("effect_clear");
 
 }

@@ -1,0 +1,65 @@
+{
+  "parent": "ostrea:pearl",
+  "criteria": {
+    "iron_pearl": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ostrea:iron_pearl"
+            ]
+          }
+        ]
+      }
+    },
+    "copper_pearl": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ostrea:copper_pearl"
+            ]
+          }
+        ]
+      }
+    },
+    "gold_pearl": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ostrea:gold_pearl"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "ostrea:textures/gui/advancements/backgrounds/nacre_block.png",
+    "description": {
+      "translate": "advancements.ostrea.metal_pearls.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "ostrea:gold_pearl"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.ostrea.metal_pearls.title"
+    }
+  },
+  "requirements": [
+    [
+      "iron_pearl",
+      "copper_pearl",
+      "gold_pearl"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
