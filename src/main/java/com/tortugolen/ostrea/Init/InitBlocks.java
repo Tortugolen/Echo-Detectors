@@ -44,7 +44,6 @@ public class InitBlocks {
                     .randomTicks()
                     .sound(SoundType.AMETHYST_CLUSTER)
                     .strength(1.5F)
-                    .pushReaction(PushReaction.DESTROY)
                     .lightLevel((plightLevel) -> {
                         return 5;
                     })));

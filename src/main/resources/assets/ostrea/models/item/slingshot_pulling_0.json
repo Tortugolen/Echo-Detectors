@@ -1,6 +1,0 @@
-{
-  "parent": "ostrea:item/slingshot",
-  "textures": {
-    "layer0": "ostrea:item/slingshot_pulling_0"
-  }
-}

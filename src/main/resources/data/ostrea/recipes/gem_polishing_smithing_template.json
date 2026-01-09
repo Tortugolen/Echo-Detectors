@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "#S#",
+    "#C#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:emerald"
+    },
+    "C": {
+      "item": "minecraft:terracotta"
+    },
+    "S": {
+      "item": "ostrea:gem_polishing_smithing_template"
+    }
+  },
+  "result": {
+    "item": "ostrea:gem_polishing_smithing_template",
+    "count": 2
+  },
+  "show_notification": true
+}

@@ -1,0 +1,30 @@
+{
+  "parent": "ostrea:receptacle_pearl",
+  "criteria": {
+    "condition": {
+      "trigger": "ostrea:abstract3"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "ostrea:textures/gui/advancements/backgrounds/nacre_block.png",
+    "description": {
+      "translate": "advancements.ostrea.full_receptacle_pearl.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "ostrea:nacre_dagger"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.ostrea.full_receptacle_pearl.title"
+    }
+  },
+  "requirements": [
+    [
+      "condition"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

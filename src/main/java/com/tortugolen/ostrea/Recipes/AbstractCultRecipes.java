@@ -36,14 +36,15 @@ public class AbstractCultRecipes implements Recipe<SimpleContainer> {
             return false;
         }
 
-        if (pContainer.getContainerSize() != inputItems.size()) {
+        if (pContainer.getContainerSize() != this.inputItems.size()) {
             return false;
         }
 
         for (int i = 0; i < inputItems.size(); i++) {
-            ItemStack pStack = pContainer.getItem(i);
+            ItemStack stack = pContainer.getItem(i);
+            Ingredient ingredient = inputItems.get(i);
 
-            if (pStack.isEmpty()) {
+            if (!ingredient.test(stack)) {
                 return false;
             }
         }

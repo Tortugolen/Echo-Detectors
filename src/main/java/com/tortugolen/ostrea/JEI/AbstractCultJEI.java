@@ -72,13 +72,13 @@ public class AbstractCultJEI implements IRecipeCategory<AbstractCultRecipes> {
 
         if (size == 9) {
             builder.addSlot(RecipeIngredientRole.INPUT, 28, 1).addIngredients(recipe.getIngredients().get(1));
-            builder.addSlot(RecipeIngredientRole.INPUT, 55, 1).addIngredients(recipe.getIngredients().get(2));
+            builder.addSlot(RecipeIngredientRole.INPUT, 51, 5).addIngredients(recipe.getIngredients().get(2));
             builder.addSlot(RecipeIngredientRole.INPUT, 55, 28).addIngredients(recipe.getIngredients().get(3));
-            builder.addSlot(RecipeIngredientRole.INPUT, 55, 55).addIngredients(recipe.getIngredients().get(4));
+            builder.addSlot(RecipeIngredientRole.INPUT, 51, 51).addIngredients(recipe.getIngredients().get(4));
             builder.addSlot(RecipeIngredientRole.INPUT, 28, 55).addIngredients(recipe.getIngredients().get(5));
-            builder.addSlot(RecipeIngredientRole.INPUT, 1, 55).addIngredients(recipe.getIngredients().get(6));
+            builder.addSlot(RecipeIngredientRole.INPUT, 5, 51).addIngredients(recipe.getIngredients().get(6));
             builder.addSlot(RecipeIngredientRole.INPUT, 1, 28).addIngredients(recipe.getIngredients().get(7));
-            builder.addSlot(RecipeIngredientRole.INPUT, 1, 1).addIngredients(recipe.getIngredients().get(8));
+            builder.addSlot(RecipeIngredientRole.INPUT, 5, 5).addIngredients(recipe.getIngredients().get(8));
         }
 
         builder.addSlot(RecipeIngredientRole.OUTPUT, 115, 28).addItemStack(recipe.getResultItem(null));
@@ -87,6 +87,15 @@ public class AbstractCultJEI implements IRecipeCategory<AbstractCultRecipes> {
 
     @Override
     public void draw(AbstractCultRecipes recipe, IRecipeSlotsView recipeSlotsView, GuiGraphics guiGraphics, double mouseX, double mouseY) {
+        int size = recipe.getIngredients().size();
+
         arrowAnimated.draw(guiGraphics, 79, 28);
+
+        if (size == 5) {
+            guiGraphics.blit(TEXTURE, 4, 4, 82, 3, 18, 18);
+            guiGraphics.blit(TEXTURE, 50, 4, 82, 3, 18, 18);
+            guiGraphics.blit(TEXTURE, 50, 50, 82, 3, 18, 18);
+            guiGraphics.blit(TEXTURE, 4, 50, 82, 3, 18, 18);
+        }
     }
 }

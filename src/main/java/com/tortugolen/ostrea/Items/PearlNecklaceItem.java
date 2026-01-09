@@ -3,7 +3,10 @@ package com.tortugolen.ostrea.Items;
 import com.tortugolen.ostrea.Init.InitEnchantments;
 import com.tortugolen.ostrea.Init.InitMobEffects;
 import com.tortugolen.ostrea.Init.InitSounds;
+import com.tortugolen.ostrea.Init.InitTriggers;
 import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.effect.MobEffect;
@@ -112,6 +115,15 @@ public class PearlNecklaceItem extends Item {
             pLevel.addParticle(ParticleTypes.ENTITY_EFFECT, pPlayer.getX() + ox, pPlayer.getY() + INITIAL_POSITION + oy, pPlayer.getZ() + oz, r, g, b);
         }
 
+        if (pLevel instanceof ServerLevel pServerLevel && pPlayer instanceof ServerPlayer pServerPlayer) {
+            InitTriggers.ABSTRACT5.trigger(pServerPlayer);
+        }
+
         return InteractionResultHolder.success(pStack);
+    }
+
+    @Override
+    public int getEnchantmentValue(ItemStack stack) {
+        return 10;
     }
 }

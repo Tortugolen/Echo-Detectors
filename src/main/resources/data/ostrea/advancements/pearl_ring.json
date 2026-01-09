@@ -2,7 +2,7 @@
   "parent": "ostrea:pearl_jewel",
   "criteria": {
     "condition": {
-      "trigger": "ostrea:abstract"
+      "trigger": "ostrea:abstract1"
     }
   },
   "display": {

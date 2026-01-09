@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "ostrea:pearl"
+  },
+  "base": {
+    "item": "ostrea:gold_bracelet"
+  },
+  "result": {
+    "item": "ostrea:pearl_bracelet"
+  },
+  "template": {
+    "item": "ostrea:gem_polishing_smithing_template"
+  }
+}

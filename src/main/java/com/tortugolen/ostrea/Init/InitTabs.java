@@ -19,17 +19,18 @@ public class InitTabs {
                     .icon(() -> new ItemStack(InitItems.PEARL.get()))
                     .displayItems((pParameters, pOutput) -> {
 
-                        pOutput.accept(InitItems.CRUSHER_ITEM.get());
                         pOutput.accept(InitItems.CALCIUM_CARBONATE.get());
                         pOutput.accept(InitItems.NACRE.get());
                         pOutput.accept(InitItems.AMORPHOUS_PEARL.get());
+                        pOutput.accept(InitItems.RECEPTACLE_PEARL.get());
                         pOutput.accept(InitItems.PEARL.get());
-                        pOutput.accept(InitItems.PEARL_TIP.get());
                         pOutput.accept(InitItems.IRON_PEARL.get());
-                        pOutput.accept(InitItems.IRON_PEARL_TIP.get());
                         pOutput.accept(InitItems.COPPER_PEARL.get());
-                        pOutput.accept(InitItems.COPPER_PEARL_TIP.get());
                         pOutput.accept(InitItems.GOLD_PEARL.get());
+                        pOutput.accept(InitItems.STATUSFER.get());
+                        pOutput.accept(InitItems.PEARL_TIP.get());
+                        pOutput.accept(InitItems.IRON_PEARL_TIP.get());
+                        pOutput.accept(InitItems.COPPER_PEARL_TIP.get());
                         pOutput.accept(InitItems.GOLD_PEARL_TIP.get());
                         pOutput.accept(InitItems.OYSTER_ITEM.get());
                         pOutput.accept(InitItems.MECHANICAL_OYSTER_ITEM.get());
@@ -38,12 +39,19 @@ public class InitTabs {
                         pOutput.accept(InitItems.ARAGONITE_SHARD_ITEM.get());
                         pOutput.accept(InitItems.ARAGONITE_POWDER.get());
 
+                        pOutput.accept(InitItems.GOLD_RING.get());
+                        pOutput.accept(InitItems.GOLD_NECKLACE.get());
+                        pOutput.accept(InitItems.GOLD_BRACELET.get());
+                        pOutput.accept(InitItems.AMETHYST_MIRROR.get());
+
                         pOutput.accept(InitItems.PEARL_RING.get());
                         pOutput.accept(InitItems.PEARL_NECKLACE.get());
+                        pOutput.accept(InitItems.PEARL_BRACELET.get());
                         pOutput.accept(InitItems.PEARLED_MIRROR.get());
-                        //pOutput.accept(InitItems.RECEPTACLE_PEARL.get());
 
+                        pOutput.accept(InitItems.GEM_POLISHING_SMITHING_TEMPLATE.get());
                         pOutput.accept(InitItems.SHELLFISH_KNIFE.get());
+                        pOutput.accept(InitItems.NACRE_DAGGER.get());
                         pOutput.accept(InitItems.NACREOUS_RESIN.get());
                         pOutput.accept(InitItems.COPPER_NUGGET.get());
                         pOutput.accept(InitItems.IMPURITIES.get());
@@ -75,8 +83,10 @@ public class InitTabs {
                         pOutput.accept(InitItems.NACRE_STAIRS_ITEM.get());
                         pOutput.accept(InitItems.NACRE_BRICKS_ITEM.get());
                         pOutput.accept(InitItems.SMOOTH_NACRE_BLOCK_ITEM.get());
+                        //pOutput.accept(InitItems.JEWELRY_TABLE_ITEM.get());
                         pOutput.accept(InitItems.NACRE_ALTAR_ITEM.get());
                         pOutput.accept(InitItems.DEEPSLATE_ALTAR_ITEM.get());
+                        pOutput.accept(InitItems.CRUSHER_ITEM.get());
 
                         pOutput.accept(EnchantedBookItem.createForEnchantment(new EnchantmentInstance(InitEnchantments.SHELL_OPENER.get(), 1)));
                         pOutput.accept(EnchantedBookItem.createForEnchantment(new EnchantmentInstance(InitEnchantments.SELECTIVE_BLESSING.get(), 1)));

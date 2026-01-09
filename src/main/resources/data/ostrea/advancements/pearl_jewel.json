@@ -36,6 +36,18 @@
         ]
       },
       "trigger": "minecraft:inventory_changed"
+    },
+    "pearl_bracelet": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ostrea:pearl_bracelet"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
     }
   },
   "display": {
@@ -58,6 +70,7 @@
     [
       "pearl_necklace",
       "pearl_ring",
+      "pearl_bracelet",
       "pearled_mirror"
     ]
   ],

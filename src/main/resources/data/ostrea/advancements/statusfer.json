@@ -1,0 +1,39 @@
+{
+  "parent": "ostrea:full_receptacle_pearl",
+  "criteria": {
+    "statusfer": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ostrea:statusfer"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "ostrea:textures/gui/advancements/backgrounds/nacre_block.png",
+    "description": {
+      "translate": "advancements.ostrea.statusfer.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "ostrea:statusfer"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.ostrea.statusfer.title"
+    }
+  },
+  "requirements": [
+    [
+      "statusfer"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

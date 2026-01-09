@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "ostrea:block/oak_planks",
+    "east": "ostrea:block/crafting_table_side",
+    "north": "ostrea:block/crafting_table_front",
+    "particle": "ostrea:block/crafting_table_front",
+    "south": "ostrea:block/crafting_table_side",
+    "up": "ostrea:block/crafting_table_top",
+    "west": "ostrea:block/crafting_table_front"
+  }
+}

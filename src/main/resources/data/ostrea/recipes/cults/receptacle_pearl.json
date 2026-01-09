@@ -1,0 +1,37 @@
+{
+  "type": "ostrea:abstract_cult",
+  "size": 9,
+  "cult": "abstract",
+  "ingredients": [
+    {
+      "item": "ostrea:pearl"
+    },
+    {
+      "item": "ostrea:nacre"
+    },
+    {
+      "tag": "forge:shells"
+    },
+    {
+      "item": "ostrea:nacre"
+    },
+    {
+      "tag": "forge:shells"
+    },
+    {
+      "item": "ostrea:nacre"
+    },
+    {
+      "tag": "forge:shells"
+    },
+    {
+      "item": "ostrea:nacre"
+    },
+    {
+      "tag": "forge:shells"
+    }
+  ],
+  "result": {
+    "item": "ostrea:receptacle_pearl"
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "parent": "ostrea:pearl_printer",
+  "criteria": {
+    "round_amom": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ostrea:round_amom"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "tip_amom": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ostrea:tip_amom"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "calcium_carbonate_amom": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ostrea:calcium_carbonate_amom"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "iron_amom": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ostrea:iron_amom"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "gold_amom": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ostrea:gold_amom"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "copper_amom": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ostrea:copper_amom"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "ostrea:textures/gui/advancements/backgrounds/nacre_block.png",
+    "description": {
+      "translate": "advancements.ostrea.rune_collector.description"
+    },
+    "frame": "challenge",
+    "hidden": false,
+    "icon": {
+      "item": "ostrea:calcium_carbonate_amom"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.ostrea.rune_collector.title"
+    }
+  },
+  "requirements": [
+    [
+      "round_amom"
+    ],
+    [
+      "tip_amom"
+    ],
+    [
+      "calcium_carbonate_amom"
+    ],
+    [
+      "iron_amom"
+    ],
+    [
+      "gold_amom"
+    ],
+    [
+      "copper_amom"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

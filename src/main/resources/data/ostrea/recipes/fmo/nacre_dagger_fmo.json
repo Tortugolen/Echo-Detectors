@@ -1,0 +1,17 @@
+{
+  "type": "ostrea:extended_pearlization",
+  "ingredients": [
+    {
+      "item": "ostrea:shellfish_knife"
+    },
+    {
+      "tag": "ostrea:mom/tip_mom"
+    },
+    {
+      "tag": "ostrea:mom/calcium_carbonate_mom"
+    }
+  ],
+  "result": {
+    "item": "ostrea:nacre_dagger"
+  }
+}

@@ -107,9 +107,14 @@ public class PearledMirrorItem extends Item {
         }
 
         if (pLevel instanceof ServerLevel pServerLevel && pPlayer instanceof ServerPlayer pServerPlayer && count > 0) {
-            InitTriggers.ABSTRACT.trigger(pServerPlayer);
+            InitTriggers.ABSTRACT2.trigger(pServerPlayer);
         }
 
         return InteractionResultHolder.success(pStack);
+    }
+
+    @Override
+    public int getEnchantmentValue(ItemStack stack) {
+        return 10;
     }
 }

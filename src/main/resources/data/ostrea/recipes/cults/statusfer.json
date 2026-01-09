@@ -1,0 +1,37 @@
+{
+  "type": "ostrea:abstract_cult",
+  "size": 9,
+  "cult": "abstract",
+  "ingredients": [
+    {
+      "item": "ostrea:receptacle_pearl"
+    },
+    {
+      "item": "ostrea:gold_pearl"
+    },
+    {
+      "item": "minecraft:emerald"
+    },
+    {
+      "item": "ostrea:gold_pearl"
+    },
+    {
+      "item": "minecraft:emerald"
+    },
+    {
+      "item": "ostrea:gold_pearl"
+    },
+    {
+      "item": "minecraft:emerald"
+    },
+    {
+      "item": "ostrea:gold_pearl"
+    },
+    {
+      "item": "minecraft:emerald"
+    }
+  ],
+  "result": {
+    "item": "ostrea:statusfer"
+  }
+}

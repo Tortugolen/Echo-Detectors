@@ -6,8 +6,11 @@ import com.tortugolen.ostrea.Items.PearlTips.GoldPearlTipItem;
 import com.tortugolen.ostrea.Items.PearlTips.IronPearlTipItem;
 import com.tortugolen.ostrea.Items.PearlTips.PearlTipItem;
 import com.tortugolen.ostrea.Ostrea;
+import com.tortugolen.ostrea.Tiers.NacreTier;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.SwordItem;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -34,8 +37,16 @@ public class InitItems {
     public static final RegistryObject<Item> PEARL_NECKLACE = ITEMS.register("pearl_necklace", () -> new PearlNecklaceItem(new Item.Properties().durability(64)));
     public static final RegistryObject<Item> PEARL_RING = ITEMS.register("pearl_ring", () -> new PearlRingItem(new Item.Properties().durability(64)));
     public static final RegistryObject<Item> PEARLED_MIRROR = ITEMS.register("pearled_mirror", () -> new PearledMirrorItem(new Item.Properties().durability(64)));
+    public static final RegistryObject<Item> PEARL_BRACELET = ITEMS.register("pearl_bracelet", () -> new PearlBraceletItem(new Item.Properties().durability(64)));
+    public static final RegistryObject<Item> RECEPTACLE_PEARL = ITEMS.register("receptacle_pearl", () -> new ReceptaclePearlItem(new Item.Properties().durability(64).rarity(Rarity.UNCOMMON)));
+    public static final RegistryObject<Item> GOLD_NECKLACE = ITEMS.register("gold_necklace", () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> GOLD_RING = ITEMS.register("gold_ring", () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> AMETHYST_MIRROR = ITEMS.register("amethyst_mirror", () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> GOLD_BRACELET = ITEMS.register("gold_bracelet", () -> new Item(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> NACREOUS_RESIN = ITEMS.register("nacreous_resin", () -> new NacreousResinItem(new Item.Properties()));
-    public static final RegistryObject<Item> RECEPTACLE_PEARL = ITEMS.register("receptacle_pearl", () -> new ReceptaclePearlItem(new Item.Properties()));
+    public static final RegistryObject<Item> GEM_POLISHING_SMITHING_TEMPLATE = ITEMS.register("gem_polishing_smithing_template", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> STATUSFER = ITEMS.register("statusfer", () -> new StatusferItem(new Item.Properties().durability(64).rarity(Rarity.RARE)));
+    public static final RegistryObject<Item> NACRE_DAGGER = ITEMS.register("nacre_dagger", () -> new NacreDaggerItem(new NacreTier(), 2, -2F, new Item.Properties()));
 
     //MechanicalOysterModifiers
 

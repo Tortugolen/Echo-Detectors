@@ -11,6 +11,9 @@
         ]
       },
       "trigger": "minecraft:inventory_changed"
+    },
+    "condition": {
+      "trigger": "ostrea:abstract4"
     }
   },
   "display": {
@@ -31,7 +34,8 @@
   },
   "requirements": [
     [
-      "oyster"
+      "oyster",
+      "condition"
     ]
   ],
   "sends_telemetry_event": true

@@ -1,10 +1,7 @@
 package com.tortugolen.ostrea.Blocks;
 
 import com.tortugolen.ostrea.BlockEntities.OysterBlockEntity;
-import com.tortugolen.ostrea.Init.InitBlockEntities;
-import com.tortugolen.ostrea.Init.InitEnchantments;
-import com.tortugolen.ostrea.Init.InitItems;
-import com.tortugolen.ostrea.Init.InitSounds;
+import com.tortugolen.ostrea.Init.*;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
@@ -145,11 +142,14 @@ public class OysterBlock extends BaseEntityBlock implements SimpleWaterloggedBlo
         if (!pLevel.isClientSide()) {
             BlockEntity entity = pLevel.getBlockEntity(pPos);
             if (entity instanceof OysterBlockEntity) {
-                if (itemStack.is(InitItems.SHELLFISH_KNIFE.get())) {
+                if (itemStack.is(InitTags.Items.OYSTER_OPENER)) {
                     if (!pPlayer.isCreative()) {
                         itemStack.hurtAndBreak(1, pPlayer, player -> player.broadcastBreakEvent(pHand));
                     }
                     NetworkHooks.openScreen(((ServerPlayer)pPlayer), (OysterBlockEntity)entity, pPos);
+                    if (pLevel instanceof ServerLevel pServerLevel && pPlayer instanceof ServerPlayer pServerPlayer) {
+                        InitTriggers.ABSTRACT4.trigger(pServerPlayer);
+                    }
                     pLevel.playSound(null, pPos, SoundEvents.DECORATED_POT_PLACE, SoundSource.BLOCKS, 1F, 1F);
                     open = true;
                 } else if (EnchantmentHelper.getItemEnchantmentLevel(InitEnchantments.SHELL_OPENER.get(), itemStack) > 0) {
@@ -157,6 +157,9 @@ public class OysterBlock extends BaseEntityBlock implements SimpleWaterloggedBlo
                         itemStack.hurtAndBreak(1, pPlayer, player -> player.broadcastBreakEvent(pHand));
                     }
                     NetworkHooks.openScreen(((ServerPlayer)pPlayer), (OysterBlockEntity)entity, pPos);
+                    if (pLevel instanceof ServerLevel pServerLevel && pPlayer instanceof ServerPlayer pServerPlayer) {
+                        InitTriggers.ABSTRACT4.trigger(pServerPlayer);
+                    }
                     pLevel.playSound(null, pPos, SoundEvents.DECORATED_POT_PLACE, SoundSource.BLOCKS, 1F, 1F);
                     open = true;
                 } else {

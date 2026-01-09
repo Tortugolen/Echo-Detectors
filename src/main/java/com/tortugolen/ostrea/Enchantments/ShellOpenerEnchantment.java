@@ -14,7 +14,7 @@ public class ShellOpenerEnchantment extends Enchantment {
 
     @Override
     public boolean canEnchant(ItemStack pStack) {
-        return pStack.getItem() instanceof TieredItem || pStack.is(InitItems.SHELLFISH_KNIFE.get());
+        return pStack.getItem() instanceof TieredItem || pStack.is(InitItems.SHELLFISH_KNIFE.get()) || pStack.is(InitItems.NACRE_DAGGER.get());
     }
 
     public boolean isTreasureOnly() {

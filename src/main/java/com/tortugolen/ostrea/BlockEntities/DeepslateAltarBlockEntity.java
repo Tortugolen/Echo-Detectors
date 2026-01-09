@@ -1,6 +1,7 @@
 package com.tortugolen.ostrea.BlockEntities;
 
 import com.tortugolen.ostrea.Init.InitBlockEntities;
+import com.tortugolen.ostrea.Init.InitItems;
 import com.tortugolen.ostrea.Recipes.AbstractCultRecipes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -155,7 +156,7 @@ public class DeepslateAltarBlockEntity extends BlockEntity {
     public @Nullable NacreAltarBlockEntity getAltarAt(Level pLevel, Direction dir, int dist) {
         if (pLevel == null) return null;
 
-        BlockPos pPos = relativeWithDistance(worldPosition, dir, dist);
+        BlockPos pPos = worldPosition.relative(dir, dist);
         BlockEntity be = pLevel.getBlockEntity(pPos);
 
         if (be instanceof NacreAltarBlockEntity altar)
@@ -167,7 +168,7 @@ public class DeepslateAltarBlockEntity extends BlockEntity {
     public @Nullable NacreAltarBlockEntity getAltarAtDiagonal(Level pLevel, Direction d1, Direction d2, int dist) {
         if (pLevel == null) return null;
 
-        BlockPos pPos = relativeDiagonalWithDistance(worldPosition, d1, d2, dist);
+        BlockPos pPos = worldPosition.relative(d1, getDiagonalOffset()).relative(d2, getDiagonalOffset());
         BlockEntity be = pLevel.getBlockEntity(pPos);
 
         if (be instanceof NacreAltarBlockEntity altar)
@@ -176,56 +177,46 @@ public class DeepslateAltarBlockEntity extends BlockEntity {
         return null;
     }
 
-    public ItemStack getItemAt(Direction dir, int dist) {
-        NacreAltarBlockEntity altar = getAltarAt(level, dir, dist);
+    public ItemStack getItemAt(Direction dir, int size) {
+        NacreAltarBlockEntity altar = getAltarAt(level, dir, getCardinalOffset(size));
         return altar != null ? altar.getItem() : ItemStack.EMPTY;
     }
 
-    public ItemStack getItemAtDiagonal(Direction d1, Direction d2, int dist) {
-        NacreAltarBlockEntity altar = getAltarAtDiagonal(level, d1, d2, dist);
+    public ItemStack getItemAtDiagonal(Direction d1, Direction d2) {
+        NacreAltarBlockEntity altar = getAltarAtDiagonal(level, d1, d2, 0);
         return altar != null ? altar.getItem() : ItemStack.EMPTY;
     }
 
     public NonNullList<ItemStack> getMatrixItems(int size) {
         NonNullList<ItemStack> list = NonNullList.withSize(size, ItemStack.EMPTY);
 
-        list.set(0, this.getItem());
+        list.set(0, getItem());
 
-        int distance = (size == 9) ? 3 : 2;
+        int c = getCardinalOffset(size);
 
-        if (size == 5) {
-            if (hasNinePatternOnCardinalAxes()) {
-                distance = 3;
-            }
-
-            if (!hasAllAltarsAtDistance(distance, new Direction[]{Direction.NORTH, Direction.EAST, Direction.SOUTH, Direction.WEST})) {
-                return NonNullList.create();
-            }
-
-            list.set(1, getItemAt(Direction.NORTH, distance));
-            list.set(2, getItemAt(Direction.EAST, distance));
-            list.set(3, getItemAt(Direction.SOUTH, distance));
-            list.set(4, getItemAt(Direction.WEST, distance));
+        if (!hasAllAltarsAtDistance(c,
+                new Direction[]{Direction.NORTH, Direction.EAST, Direction.SOUTH, Direction.WEST})) {
+            return NonNullList.create();
         }
 
+        list.set(1, getItemAt(Direction.NORTH, size));
+
         if (size == 9) {
-            if (!hasAllAltarsAtDistance(distance, new Direction[]{
-                    Direction.NORTH,
-                    Direction.EAST,
-                    Direction.SOUTH,
-                    Direction.WEST,
-            }) || !hasAllDiagonalAltarsAtDistance(distance)) {
+            if (!hasAllDiagonalAltarsAtDistance(getDiagonalOffset())) {
                 return NonNullList.create();
             }
 
-            list.set(1, getItemAt(Direction.NORTH, distance));
-            list.set(2, getItemAtDiagonal(Direction.NORTH, Direction.EAST, distance));
-            list.set(3, getItemAt(Direction.EAST, distance));
-            list.set(4, getItemAtDiagonal(Direction.SOUTH, Direction.EAST, distance));
-            list.set(5, getItemAt(Direction.SOUTH, distance));
-            list.set(6, getItemAtDiagonal(Direction.SOUTH, Direction.WEST, distance));
-            list.set(7, getItemAt(Direction.WEST, distance));
-            list.set(8, getItemAtDiagonal(Direction.NORTH, Direction.WEST, distance));
+            list.set(2, getItemAtDiagonal(Direction.NORTH, Direction.EAST));
+            list.set(3, getItemAt(Direction.EAST, size));
+            list.set(4, getItemAtDiagonal(Direction.SOUTH, Direction.EAST));
+            list.set(5, getItemAt(Direction.SOUTH, size));
+            list.set(6, getItemAtDiagonal(Direction.SOUTH, Direction.WEST));
+            list.set(7, getItemAt(Direction.WEST, size));
+            list.set(8, getItemAtDiagonal(Direction.NORTH, Direction.WEST));
+        } else {
+            list.set(2, getItemAt(Direction.EAST, size));
+            list.set(3, getItemAt(Direction.SOUTH, size));
+            list.set(4, getItemAt(Direction.WEST, size));
         }
 
         return list;
@@ -255,30 +246,27 @@ public class DeepslateAltarBlockEntity extends BlockEntity {
                 && getAltarAtDiagonal(level, Direction.NORTH, Direction.WEST, distance) != null;
     }
 
-    private boolean hasNinePatternOnCardinalAxes() {
-        int testDistance = 3;
-        boolean cardinalsPresent = hasAllAltarsAtDistance(testDistance, new Direction[]{Direction.NORTH, Direction.EAST, Direction.SOUTH, Direction.WEST});
-        boolean diagonalsPresent = hasAllDiagonalAltarsAtDistance(testDistance);
-        return cardinalsPresent && !diagonalsPresent;
-    }
-
     public void tick(Level pLevel, BlockPos pPos, BlockState pState) {
         if (pLevel == null || pLevel.isClientSide()) return;
 
         if (hasRecipe(pLevel, 9)) {
             increaseCraftingProgress();
             setChanged();
+
             if (hasProgressFinished()) {
                 craftItem(pLevel, pPos);
                 resetProgress();
             }
+
         } else if (hasRecipe(pLevel, 5)) {
             increaseCraftingProgress();
             setChanged();
+
             if (hasProgressFinished()) {
                 craftItem(pLevel, pPos);
                 resetProgress();
             }
+
         } else {
             resetProgress();
             setChanged();
@@ -306,6 +294,7 @@ public class DeepslateAltarBlockEntity extends BlockEntity {
     private void craftItem(Level pLevel, BlockPos pPos) {
         Optional<AbstractCultRecipes> optionalRecipe = getCurrentRecipe(9);
         int sizeToUse = 9;
+
         if (optionalRecipe.isEmpty()) {
             optionalRecipe = getCurrentRecipe(5);
             sizeToUse = 5;
@@ -315,6 +304,18 @@ public class DeepslateAltarBlockEntity extends BlockEntity {
 
         AbstractCultRecipes recipe = optionalRecipe.get();
         ItemStack result = recipe.getResultItem(level.registryAccess()).copy();
+
+        ItemStack pStack = getItem().copy();
+
+        if (isFullReceptaclePearlItem()) {
+            CompoundTag pTag = pStack.getTag();
+
+            if (pTag != null && pTag.contains("stored_effect", CompoundTag.TAG_STRING)) {
+                String pEffect = pTag.getString("stored_effect");
+                CompoundTag resultTag = result.getOrCreateTag();
+                resultTag.putString("effect", pEffect);
+            }
+        }
 
         consumeIngredients(sizeToUse);
 
@@ -328,34 +329,25 @@ public class DeepslateAltarBlockEntity extends BlockEntity {
     }
 
     private void consumeIngredients(int size) {
-        int distance = (size == 9) ? 3 : 2;
+        int cardinalOffset = getCardinalOffset(size);
 
-        if (size == 5 && hasNinePatternOnCardinalAxes()) {
-            distance = 3;
-        }
-
-        if (size == 5) {
-            consumeAt(Direction.NORTH, distance);
-            consumeAt(Direction.EAST, distance);
-            consumeAt(Direction.SOUTH, distance);
-            consumeAt(Direction.WEST, distance);
-        }
+        consumeAt(Direction.NORTH, cardinalOffset);
+        consumeAt(Direction.EAST, cardinalOffset);
+        consumeAt(Direction.SOUTH, cardinalOffset);
+        consumeAt(Direction.WEST, cardinalOffset);
 
         if (size == 9) {
-            consumeAt(Direction.NORTH, distance);
-            consumeAtDiagonal(Direction.NORTH, Direction.EAST, distance);
-            consumeAt(Direction.EAST, distance);
-            consumeAtDiagonal(Direction.SOUTH, Direction.EAST, distance);
-            consumeAt(Direction.SOUTH, distance);
-            consumeAtDiagonal(Direction.SOUTH, Direction.WEST, distance);
-            consumeAt(Direction.WEST, distance);
-            consumeAtDiagonal(Direction.NORTH, Direction.WEST, distance);
+            consumeAtDiagonal(Direction.NORTH, Direction.EAST);
+            consumeAtDiagonal(Direction.SOUTH, Direction.EAST);
+            consumeAtDiagonal(Direction.SOUTH, Direction.WEST);
+            consumeAtDiagonal(Direction.NORTH, Direction.WEST);
         }
     }
 
     private void consumeAt(Direction dir, int dist) {
         BlockPos pos = worldPosition.relative(dir, dist);
         BlockEntity be = level.getBlockEntity(pos);
+
         if (be instanceof NacreAltarBlockEntity altar) {
             ItemStack stack = altar.getItem();
             if (!stack.isEmpty()) {
@@ -367,8 +359,11 @@ public class DeepslateAltarBlockEntity extends BlockEntity {
         }
     }
 
-    private void consumeAtDiagonal(Direction d1, Direction d2, int dist) {
-        BlockPos pos = worldPosition.relative(d1, dist).relative(d2, dist);
+    private void consumeAtDiagonal(Direction d1, Direction d2) {
+        BlockPos pos = worldPosition
+                .relative(d1, getDiagonalOffset())
+                .relative(d2, getDiagonalOffset());
+
         BlockEntity be = level.getBlockEntity(pos);
         if (be instanceof NacreAltarBlockEntity altar) {
             ItemStack stack = altar.getItem();
@@ -439,5 +434,25 @@ public class DeepslateAltarBlockEntity extends BlockEntity {
         for (int i = 0; i < items.size(); i++) container.setItem(i, items.get(i));
 
         return level.getRecipeManager().getRecipeFor(AbstractCultRecipes.Type.INSTANCE, container, level);
+    }
+
+    private int getCardinalOffset(int size) {
+        return size == 9 ? 3 : 2;
+    }
+
+    private int getDiagonalOffset() {
+        return 2;
+    }
+
+    private boolean isFullReceptaclePearlItem() {
+        ItemStack pStack = getItem();
+        if (!pStack.hasTag()) return false;
+
+        CompoundTag pTag = pStack.getTag();
+        if (!pTag.contains("effect_amount", CompoundTag.TAG_INT)) return false;
+        if (pTag.getInt("effect_amount") != 64) return false;
+        if (!pStack.is(InitItems.RECEPTACLE_PEARL.get())) return false;
+
+        return true;
     }
 }
