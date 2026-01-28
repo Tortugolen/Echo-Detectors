@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "#S#",
+    "#C#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:amethyst_shard"
+    },
+    "C": {
+      "item": "minecraft:deepslate"
+    },
+    "S": {
+      "item": "echo_detectors:detector_upgrade_smithing_template"
+    }
+  },
+  "result": {
+    "item": "echo_detectors:detector_upgrade_smithing_template",
+    "count": 2
+  },
+  "show_notification": true
+}

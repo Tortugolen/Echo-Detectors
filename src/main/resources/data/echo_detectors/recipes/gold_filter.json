@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:echo_shard"
+    },
+    "W": {
+      "item": "minecraft:raw_gold"
+    },
+    "X": {
+      "item": "minecraft:gold_ingot"
+    },
+    "Y": {
+      "tag": "echo_detectors:gold_util"
+    },
+    "Z": {
+      "tag": "echo_detectors:gold_extra"
+    }
+  },
+  "pattern": [
+    " W ",
+    "Z#X",
+    " Y "
+  ],
+  "result": {
+    "item": "echo_detectors:gold_filter"
+  },
+  "show_notification": true
+}

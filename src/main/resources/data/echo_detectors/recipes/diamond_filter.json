@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:echo_shard"
+    },
+    "W": {
+      "tag": "echo_detectors:smithing_templates"
+    },
+    "X": {
+      "item": "minecraft:diamond"
+    },
+    "Y": {
+      "tag": "echo_detectors:diamond_util"
+    },
+    "Z": {
+      "tag": "echo_detectors:diamond_extra"
+    }
+  },
+  "pattern": [
+    " W ",
+    "Z#X",
+    " Y "
+  ],
+  "result": {
+    "item": "echo_detectors:diamond_filter"
+  },
+  "show_notification": true
+}

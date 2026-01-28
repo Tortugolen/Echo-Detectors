@@ -1,0 +1,21 @@
+{
+  "type": "echo_detectors:detector_crafting",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "echo_detectors:metal_detector"
+    },
+    "X": {
+      "item": "minecraft:echo_shard"
+    }
+  },
+  "pattern": [
+    " X ",
+    "X#X",
+    " X "
+  ],
+  "result": {
+    "item": "echo_detectors:echo_detector"
+  },
+  "show_notification": true
+}

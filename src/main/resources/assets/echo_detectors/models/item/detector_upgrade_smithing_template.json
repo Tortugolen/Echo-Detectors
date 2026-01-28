@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "echo_detectors:item/detector_upgrade_smithing_template"
+  }
+}

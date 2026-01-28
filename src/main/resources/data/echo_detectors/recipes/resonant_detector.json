@@ -1,0 +1,24 @@
+{
+  "type": "echo_detectors:detector_crafting",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "echo_detectors:echo_detector"
+    },
+    "X": {
+      "item": "minecraft:amethyst_shard"
+    },
+    "Y": {
+      "item": "minecraft:sculk_sensor"
+    }
+  },
+  "pattern": [
+    "YXY",
+    "X#X",
+    "YXY"
+  ],
+  "result": {
+    "item": "echo_detectors:resonant_detector"
+  },
+  "show_notification": true
+}

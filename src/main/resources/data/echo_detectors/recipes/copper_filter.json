@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:echo_shard"
+    },
+    "W": {
+      "item": "minecraft:raw_copper"
+    },
+    "X": {
+      "item": "minecraft:copper_ingot"
+    },
+    "Y": {
+      "tag": "echo_detectors:copper_util"
+    },
+    "Z": {
+      "tag": "echo_detectors:copper_extra"
+    }
+  },
+  "pattern": [
+    " W ",
+    "Z#X",
+    " Y "
+  ],
+  "result": {
+    "item": "echo_detectors:copper_filter"
+  },
+  "show_notification": true
+}

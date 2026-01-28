@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "echo_detectors:metal_detector",
+    "echo_detectors:echo_detector",
+    "echo_detectors:resonant_detector"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "criteria": {
+    "condition": {
+      "trigger": "echo_detectors:abstract0"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/block/deepslate.png",
+    "description": {
+      "translate": "advancements.echo_detectors.root.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "echo_detectors:metal_detector"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.echo_detectors.root.title"
+    }
+  },
+  "requirements": [
+    [
+      "condition"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,15 @@
+{
+  "values": [
+    "echo_detectors:iron_filter",
+    "echo_detectors:gold_filter",
+    "echo_detectors:copper_filter",
+    "echo_detectors:coal_filter",
+    "echo_detectors:lapis_filter",
+    "echo_detectors:redstone_filter",
+    "echo_detectors:amethyst_filter",
+    "echo_detectors:diamond_filter",
+    "echo_detectors:emerald_filter",
+    "echo_detectors:quartz_filter",
+    "echo_detectors:netherite_filter"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "type": "echo_detectors:detector_upgrade",
+  "template": {
+    "item": "echo_detectors:detector_upgrade_smithing_template"
+  },
+  "base": {
+    "tag": "echo_detectors:detectors"
+  },
+  "upgrade": {
+    "item": "echo_detectors:name_upgrade"
+  }
+}

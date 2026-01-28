@@ -1,0 +1,10 @@
+{
+  "failed_try": {
+    "sounds": [
+      "echo_detectors:failed_try_1",
+      "echo_detectors:failed_try_2",
+      "echo_detectors:failed_try_3"
+    ]
+  },
+  "found": {"sounds": ["echo_detectors:found"]}
+}

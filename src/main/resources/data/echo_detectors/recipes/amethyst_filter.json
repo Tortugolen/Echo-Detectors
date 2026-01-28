@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:echo_shard"
+    },
+    "W": {
+      "item": "minecraft:amethyst_shard"
+    },
+    "X": {
+      "tag": "echo_detectors:amethyst_bud"
+    },
+    "Y": {
+      "item": "minecraft:amethyst_cluster"
+    },
+    "Z": {
+      "item": "minecraft:amethyst_block"
+    }
+  },
+  "pattern": [
+    " W ",
+    "Z#X",
+    " Y "
+  ],
+  "result": {
+    "item": "echo_detectors:amethyst_filter"
+  },
+  "show_notification": true
+}

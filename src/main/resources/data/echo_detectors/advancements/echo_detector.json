@@ -1,0 +1,39 @@
+{
+  "parent": "echo_detectors:root",
+  "criteria": {
+    "condition": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "echo_detectors:echo_detector"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/block/deepslate.png",
+    "description": {
+      "translate": "advancements.echo_detectors.echo_detector.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "echo_detectors:echo_detector"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.echo_detectors.echo_detector.title"
+    }
+  },
+  "requirements": [
+    [
+      "condition"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

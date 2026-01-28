@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:echo_shard"
+    },
+    "W": {
+      "item": "minecraft:netherite_scrap"
+    },
+    "X": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "Y": {
+      "tag": "echo_detectors:netherite_util"
+    },
+    "Z": {
+      "tag": "echo_detectors:netherite_extra"
+    }
+  },
+  "pattern": [
+    " W ",
+    "Z#X",
+    " Y "
+  ],
+  "result": {
+    "item": "echo_detectors:netherite_filter"
+  },
+  "show_notification": true
+}

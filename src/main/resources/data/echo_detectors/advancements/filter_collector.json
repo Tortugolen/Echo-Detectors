@@ -1,0 +1,189 @@
+{
+  "parent": "echo_detectors:resonant_detector",
+  "criteria": {
+    "iron_filter": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "echo_detectors:iron_filter"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "gold_filter": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "echo_detectors:gold_filter"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "copper_filter": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "echo_detectors:copper_filter"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "coal_filter": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "echo_detectors:coal_filter"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "lapis_filter": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "echo_detectors:lapis_filter"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "redstone_filter": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "echo_detectors:redstone_filter"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "amethyst_filter": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "echo_detectors:amethyst_filter"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "diamond_filter": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "echo_detectors:diamond_filter"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "emerald_filter": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "echo_detectors:emerald_filter"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "quartz_filter": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "echo_detectors:quartz_filter"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "netherite_filter": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "echo_detectors:netherite_filter"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/block/deepslate.png",
+    "description": {
+      "translate": "advancements.echo_detectors.filter_collector.description"
+    },
+    "frame": "challenge",
+    "hidden": false,
+    "icon": {
+      "item": "echo_detectors:gold_filter"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.echo_detectors.filter_collector.title"
+    }
+  },
+  "requirements": [
+    [
+      "iron_filter"
+    ],
+    [
+      "gold_filter"
+    ],
+    [
+      "copper_filter"
+    ],
+    [
+      "coal_filter"
+    ],
+    [
+      "lapis_filter"
+    ],
+    [
+      "redstone_filter"
+    ],
+    [
+      "amethyst_filter"
+    ],
+    [
+      "diamond_filter"
+    ],
+    [
+      "emerald_filter"
+    ],
+    [
+      "quartz_filter"
+    ],
+    [
+      "netherite_filter"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,14 @@
+{
+  "type": "echo_detectors:add_item",
+  "conditions": [
+    {
+      "condition": "forge:loot_table_id",
+      "loot_table_id": "minecraft:chests/abandoned_mineshaft"
+    },
+    {
+      "chance": 0.1,
+      "condition": "minecraft:random_chance"
+    }
+  ],
+  "item": "echo_detectors:detector_upgrade_smithing_template"
+}

@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "entries": [
+    "echo_detectors:detector_upgrade_smithing_template_from_mineshaft",
+    "echo_detectors:location_upgrade_from_ancient_city",
+    "echo_detectors:name_upgrade_from_ancient_city"
+  ]
+}
