@@ -100,15 +100,32 @@ tasks.named('jar', Jar).configure {
     finalizedBy 'reobfJar'
 }
 
+def localPropsFile = rootProject.file('gradle-local.properties')
+def localProps = new Properties()
+
+if (localPropsFile.exists()) {
+    localPropsFile.withInputStream { stream ->
+        localProps.load(stream)
+    }
+}
+
 publishing {
     publications {
-        register('mavenJava', MavenPublication) {
-            artifact jar
+        mavenJava(MavenPublication) {
+            from components.java
+            groupId = mod_group_id
+            artifactId = mod_id
+            version = "${minecraft_version}-${mod_version}"
         }
     }
     repositories {
         maven {
-            url "file://${project.projectDir}/mcmodsrepo"
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/Tortugolen/Ostrea")
+            credentials {
+                username = localProps['gpr.user'] ?: project.findProperty("gpr.user") ?: System.getenv("GITHUB_ACTOR")
+                password = localProps['gpr.key'] ?: project.findProperty("gpr.key") ?: System.getenv("GITHUB_TOKEN")
+            }
         }
     }
 }
