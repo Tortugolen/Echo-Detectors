@@ -4,27 +4,34 @@ license="${mod_license}"
 
 [[mods]]
 modId="echo_detectors"
-version="1.1.1.0"
+version="${mod_version}"
 displayName="Echo Detectors"
 logoFile="echo_detectors_logo.png"
 authors="Tortugolen"
 description='''DETECTORS!!!'''
 
-[[dependencies.ostrea]]
+[[dependencies.echo_detectors]]
 modId="minecraft"
 mandatory=true
 versionRange="${minecraft_version_range}"
 ordering="NONE"
 side="BOTH"
 
-[[dependencies.ostrea]]
+[[dependencies.echo_detectors]]
 modId="forge"
 mandatory=true
 versionRange="${forge_version_range}"
 ordering="NONE"
 side="BOTH"
 
-[[dependencies.ostrea]]
+[[dependencies.echo_detectors]]
+modId="ostrea"
+mandatory=false
+versionRange="${ostrea_version_range}"
+ordering="AFTER"
+side="BOTH"
+
+[[dependencies.echo_detectors]]
 modId="jei"
 mandatory=false
 versionRange="${jei_version_range}"

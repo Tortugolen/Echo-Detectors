@@ -1,5 +1,7 @@
 package com.tortugolen.echo_detectors.Init;
 
+import com.tortugolen.echo_detectors.Compat.Ostrea.Ostrea;
+import com.tortugolen.echo_detectors.Compat.Ostrea.OstreaInitItems;
 import com.tortugolen.echo_detectors.EchoDetectors;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -35,6 +37,7 @@ public class InitTabs {
                         pOutput.accept(InitItems.LAPIS_FILTER.get());
                         pOutput.accept(InitItems.REDSTONE_FILTER.get());
 
+                        if (Ostrea.isLoaded()) pOutput.accept(OstreaInitItems.ARAGONITE_FILTER.get());
 
                         pOutput.accept(InitItems.DETECTOR_UPGRADE_SMITHING_TEMPLATE.get());
 

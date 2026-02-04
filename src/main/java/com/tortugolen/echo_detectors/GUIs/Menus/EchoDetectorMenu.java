@@ -2,6 +2,7 @@ package com.tortugolen.echo_detectors.GUIs.Menus;
 
 import com.tortugolen.echo_detectors.Init.InitItems;
 import com.tortugolen.echo_detectors.Init.InitMenus;
+import com.tortugolen.echo_detectors.Init.InitTags;
 import com.tortugolen.echo_detectors.Items.EchoDetectorItem;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.Container;
@@ -48,10 +49,7 @@ public class EchoDetectorMenu extends AbstractContainerMenu {
 
             @Override
             public boolean mayPlace(ItemStack pStack) {
-                return pStack.is(InitItems.IRON_FILTER.get()) ||
-                        pStack.is(InitItems.GOLD_FILTER.get()) ||
-                        pStack.is(InitItems.COPPER_FILTER.get()) ||
-                        pStack.is(InitItems.NETHERITE_FILTER.get());
+                return pStack.is(InitTags.Items.METAL_FILTERS);
             }
         });
 

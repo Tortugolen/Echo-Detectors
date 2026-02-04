@@ -1,0 +1,39 @@
+{
+  "parent": "echo_detectors:filter_collector",
+  "criteria": {
+    "aragonite_filter": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "echo_detectors:aragonite_filter"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/block/deepslate.png",
+    "description": {
+      "translate": "advancements.echo_detectors.aragonite_filter.description"
+    },
+    "frame": "task",
+    "hidden": true,
+    "icon": {
+      "item": "echo_detectors:aragonite_filter"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.echo_detectors.aragonite_filter.title"
+    }
+  },
+  "requirements": [
+    [
+      "aragonite_filter"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

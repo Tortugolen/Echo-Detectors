@@ -10,6 +10,8 @@
     "echo_detectors:diamond_filter",
     "echo_detectors:emerald_filter",
     "echo_detectors:quartz_filter",
-    "echo_detectors:netherite_filter"
+    "echo_detectors:netherite_filter",
+
+    "echo_detectors:aragonite_filter"
   ]
 }

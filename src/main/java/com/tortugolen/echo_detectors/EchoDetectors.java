@@ -1,8 +1,11 @@
 package com.tortugolen.echo_detectors;
 
+import com.tortugolen.echo_detectors.Compat.Ostrea.Ostrea;
 import com.tortugolen.echo_detectors.Init.*;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 @Mod(EchoDetectors.MOD_ID)
@@ -20,5 +23,8 @@ public class EchoDetectors {
         InitRecipes.SERIALIZERS.register(modEventBus);
         InitLootModifiers.LOOT_MODIFIERS.register(modEventBus);
         InitTriggers.register();
+        InitCompatibilities.register();
+
+        Ostrea.register();
     }
 }

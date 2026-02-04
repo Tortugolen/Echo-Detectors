@@ -1,5 +1,8 @@
 package com.tortugolen.echo_detectors.Items;
 
+import com.tortugolen.echo_detectors.Compat.Ostrea.Ostrea;
+import com.tortugolen.echo_detectors.Compat.Ostrea.OstreaInitItems;
+import com.tortugolen.echo_detectors.Compat.Ostrea.OstreaValidBlocks;
 import com.tortugolen.echo_detectors.GUIs.Menus.ResonantDetectorMenu;
 import com.tortugolen.echo_detectors.Init.InitItems;
 import com.tortugolen.echo_detectors.Init.InitSounds;
@@ -141,6 +144,10 @@ public class ResonantDetectorItem extends MetalDetectorItem {
             if (storedItem.is(InitItems.EMERALD_FILTER.get())) return isEmeraldBlock(pBlock);
             if (storedItem.is(InitItems.QUARTZ_FILTER.get())) return isQuartzBlock(pBlock);
             if (storedItem.is(InitItems.NETHERITE_FILTER.get())) return isNetheriteBlock(pBlock);
+
+            if (Ostrea.isLoaded()) {
+                if (storedItem.is(OstreaInitItems.ARAGONITE_FILTER.get())) return OstreaValidBlocks.isAragoniteBlock(pBlock);
+            }
         }
         return isMetalBlock(pBlock);
     }
@@ -159,6 +166,10 @@ public class ResonantDetectorItem extends MetalDetectorItem {
             if (storedItem.is(InitItems.EMERALD_FILTER.get())) return "tooltip.echo_detectors.emerald";
             if (storedItem.is(InitItems.QUARTZ_FILTER.get())) return "tooltip.echo_detectors.quartz";
             if (storedItem.is(InitItems.NETHERITE_FILTER.get())) return "tooltip.echo_detectors.netherite";
+
+            if (Ostrea.isLoaded()) {
+                if (storedItem.is(OstreaInitItems.ARAGONITE_FILTER.get())) return "tooltip.echo_detectors.aragonite";
+            }
         }
         return "tooltip.echo_detectors.255";
     }
@@ -181,6 +192,10 @@ public class ResonantDetectorItem extends MetalDetectorItem {
             if (storedItem.is(InitItems.EMERALD_FILTER.get())) return getTrimStyle(TrimMaterials.EMERALD);
             if (storedItem.is(InitItems.QUARTZ_FILTER.get())) return getTrimStyle(TrimMaterials.QUARTZ);
             if (storedItem.is(InitItems.NETHERITE_FILTER.get())) return getTrimStyle(TrimMaterials.NETHERITE);
+
+            if (Ostrea.isLoaded()) {
+                if (storedItem.is(OstreaInitItems.ARAGONITE_FILTER.get())) return getTrimStyle(TrimMaterials.COPPER);
+            }
         }
         return Style.EMPTY.withColor(ChatFormatting.GRAY);
     }

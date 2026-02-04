@@ -1,6 +1,7 @@
 package com.tortugolen.echo_detectors.GUIs.Menus;
 
-import com.tortugolen.echo_detectors.Init.InitItems;
+import com.tortugolen.echo_detectors.Compat.Ostrea.Ostrea;
+import com.tortugolen.echo_detectors.Compat.Ostrea.OstreaInitItems;
 import com.tortugolen.echo_detectors.Init.InitMenus;
 import com.tortugolen.echo_detectors.Init.InitTags;
 import com.tortugolen.echo_detectors.Items.ResonantDetectorItem;

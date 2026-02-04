@@ -1,0 +1,8 @@
+{
+  "values": [
+    "echo_detectors:iron_filter",
+    "echo_detectors:gold_filter",
+    "echo_detectors:copper_filter",
+    "echo_detectors:netherite_filter"
+  ]
+}

@@ -56,5 +56,11 @@
   "chat.echo_detectors.y": "Y:",
   "chat.echo_detectors.z": "Z:",
   "chat.echo_detectors.,": ", ",
-  "chat.echo_detectors..": "."
+  "chat.echo_detectors..": ".",
+
+
+  "item.echo_detectors.aragonite_filter": "Aragonite Filter",
+  "tooltip.echo_detectors.aragonite": "Aragonite",
+  "advancements.echo_detectors.aragonite_filter.title": "Aragonite Filter",
+  "advancements.echo_detectors.aragonite_filter.description": "Obtain an Aragonite Filter"
 }

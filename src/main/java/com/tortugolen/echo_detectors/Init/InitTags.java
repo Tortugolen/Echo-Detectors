@@ -13,5 +13,6 @@ public class InitTags {
         }
 
         public static final TagKey<Item> FILTERS = ItemTag("filters");
+        public static final TagKey<Item> METAL_FILTERS = ItemTag("metal_filters");
     }
 }
